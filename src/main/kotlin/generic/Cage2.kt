@@ -19,7 +19,8 @@ fun main() {
     val fish: Cage2<out Fish> = Cage2<GoldFish>()
 }
 
-class Cage2 <T> {
+// Generic Type Parameter 에 Any 를 상속 받으면 Null 을 허용 하지 않는다.
+class Cage2 <T: Any> {
 
     private val animals: MutableList<T> = mutableListOf()
 
