@@ -14,8 +14,3 @@ inline fun <reified T> T.toSuperString() {
 inline fun <reified T> List<*>.hasAnyInstanceOf(): Boolean {
     return this.any { it is T }
 }
-
-class TypeErase {
-
-
-}
