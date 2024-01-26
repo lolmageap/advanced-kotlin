@@ -24,9 +24,8 @@ fun calculate(
     num1: Int,
     num2: Int,
     operator: Operator,
-): Int {
-    return operator.operate(num1, num2)
-}
+) = operator(num1, num2)
+
 
 enum class Operator(
     private val op: Char,
@@ -41,6 +40,10 @@ enum class Operator(
     });
 
     fun operate(a: Int, b: Int): Int {
+        return opFunc(a, b)
+    }
+
+    operator fun invoke(a: Int, b: Int): Int {
         return opFunc(a, b)
     }
 }
