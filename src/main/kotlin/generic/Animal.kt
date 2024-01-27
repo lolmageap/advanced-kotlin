@@ -7,7 +7,11 @@ abstract class Animal(
 
 abstract class Fish(name: String): Animal(name)
 
-class GoldFish(name: String): Fish(name)
+class GoldFish(name: String): Fish(name) {
+    fun swim() {
+        println("어푸어푸")
+    }
+}
 
 class Carp(name: String): Fish(name)
 
